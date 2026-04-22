@@ -1,5 +1,9 @@
-import {multiply} from "/index.js";
+const divide = require('../index');
 
-test("multiply", ()=>{
-    expect(multiply(4, 4)).toEqual(16);
-})
+test('деление', () => {
+    expect(divide(10, 2)).toBe(5);
+});
+
+test('деление на ноль', () => {
+    expect(() => divide(10, 0)).toThrow();
+});
